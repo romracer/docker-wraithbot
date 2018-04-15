@@ -1,5 +1,3 @@
-# ref: http://www.inmethod.com/forum/posts/list/1856.page
-
 FROM phusion/baseimage:0.9.19
 MAINTAINER romracer <romracer@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
@@ -28,7 +26,7 @@ RUN apt-get -y --no-install-recommends install libssl1.0.0:i386 libc6-i386 libgc
 
 # download latest maint release
 RUN mkdir -p /opt/wraith
-COPY wraith.Linux-v1.4.7-8-g233aa4a.tar.gz /opt/wraith/wraith.Linux-maint.tar.gz
+COPY wraith.Linux-v1.4.8-9-g2424dd8d.tar.gz /opt/wraith/wraith.Linux-maint.tar.gz
 RUN tar -xzf /opt/wraith/wraith.Linux-maint.tar.gz -C /opt/wraith && \
     rm -f /opt/wraith/wraith.Linux-maint.tar.gz && \
     mv /opt/wraith/wraith.Linux-* /opt/wraith/wraith
